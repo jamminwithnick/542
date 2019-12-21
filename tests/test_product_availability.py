@@ -68,7 +68,7 @@ def test_variant_is_out_of_stock_when_product_is_unavalable(unavailable_product)
 
     status = get_variant_availability_status(variant)
     assert status == VariantAvailabilityStatus.OUT_OF_STOCK
-
+    assert status == VariantAvailabilityStatus.AVAILABLE
 
 @pytest.mark.parametrize(
     "stock, expected_status",
