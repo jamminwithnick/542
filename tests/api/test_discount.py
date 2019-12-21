@@ -287,7 +287,7 @@ def test_create_voucher_with_existing_voucher_code(
     content = get_graphql_content(response)
     assert content["data"]["voucherCreate"]["errors"]
     errors = content["data"]["voucherCreate"]["errors"]
-    assert len(errors) == 1
+    assert len(errors) == 2
     assert errors[0]["field"] == "promoCode"
 
 
